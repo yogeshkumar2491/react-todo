@@ -13,7 +13,7 @@ const Todo = (props: TodoInfo) => {
         (id !== 0 ? " mt-10" : "")
       }
     >
-      <p>explain why jordan is the goat{id}</p>
+      <p className="truncate">explain why jordan is the goat{id}</p>
       <div className="flex p-1 cursor-pointer">
         <BiEdit />
         <AiOutlineDelete />
