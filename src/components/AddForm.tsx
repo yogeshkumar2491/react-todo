@@ -10,9 +10,9 @@ const AddForm = () => (
         <input
           type="text"
           placeholder="What is the task today?"
-          className="md:w-[70%] lg:w-[78%] truncate h-9 p-2 rounded-l-sm border border-[#855AFD] border-solid bg-[#1A1A40] outline-none"
+          className="w-[75%] truncate h-9 p-2 rounded-l-sm border border-[#855AFD] border-solid bg-[#1A1A40] outline-none"
         />
-        <button className="whitespace-nowrap text-center bg-[#855AFD] rounded-r-sm px-4 h-[36px]">
+        <button className="w-[25%] truncate whitespace-nowrap text-center bg-[#855AFD] rounded-r-sm px-4 h-[36px]">
           Add Task
         </button>
       </div>
