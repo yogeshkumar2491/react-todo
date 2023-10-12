@@ -10,6 +10,12 @@ const AddForm = () => {
       setMessage("");
     }
   }
+
+  function deleteTodo(index: number) {
+    if (index) {
+      todo.splice(index, 1);
+    }
+  }
   return (
     <TodoContext.Provider value={{ todo }}>
       <div className="bg-[#1A1A40] mt-[7%] w-[70%] md:w-[45%] h-[550px] flex flex-col rounded-md">

@@ -1,14 +1,12 @@
-import { BiEdit } from "react-icons/bi";
-import { AiOutlineDelete } from "react-icons/ai";
-import TodoContext from "../utils/TodoContext";
-import { useContext } from "react";
+interface TodoProps {
+  todoList: { id: number; message: string }[];
+}
 
-const Todo = (props: { id: number; message: string }[]) => {
-  const todo = props;
+const Todo: React.FC<TodoProps> = ({ todoList }) => {
   // const { todo } = useContext(TodoContext);
   return (
     <div className="mt-[10%] mb-[7%] overflow-y-scroll">
-      {todo.map(({ id, message }) => (
+      {todoList.map(({ id, message }, index) => (
         <div
           key={id}
           className={
@@ -17,10 +15,6 @@ const Todo = (props: { id: number; message: string }[]) => {
           }
         >
           <p className="truncate">{message}</p>
-          <div className="flex p-1 cursor-pointer">
-            <BiEdit />
-            <AiOutlineDelete />
-          </div>
         </div>
       ))}
     </div>
